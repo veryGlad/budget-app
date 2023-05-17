@@ -1,5 +1,5 @@
 import React from 'react';
-import CreditCard from './CreditCard';
+import CreditCard from './ui/CreditCard';
 import { Box } from '@mui/material';
 
 const CreditCardBlock = () => {

@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import { Box } from '@mui/material';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './components/pages/HomePage';
+import ExpensesPage from './components/pages/ExpensesPage';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <Header header={'Home'} />
         <Routes>
-          <Route path={'/'} element={<div />} />
+          <Route path={'/home'} element={<HomePage />} />
+          <Route path={'/expenses'} element={<ExpensesPage />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

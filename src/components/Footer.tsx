@@ -8,6 +8,8 @@ import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import { Link, NavLink } from 'react-router-dom';
 
 const StyledLink = styled(NavLink)`
+  color: #a3a3a3;
+
   :visited {
     color: #a3a3a3;
   }

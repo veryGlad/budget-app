@@ -11,7 +11,13 @@ const CardsWithTotalBalance = () => {
   }));
 
   return (
-    <Box display={'flex'} justifyContent={'space-between'} marginTop={'32px'}>
+    <Box
+      display={'flex'}
+      justifyContent={'space-between'}
+      marginTop={'32px'}
+      maxWidth={360}
+      margin={'0 auto'}
+    >
       {bankAccounts.map((card, index) => (
         <TotalBalanceCard
           totalBalance={card.cardBalance}

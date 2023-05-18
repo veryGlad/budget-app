@@ -18,9 +18,7 @@ const ExpensesPage = () => {
       />
 
       <WeekCalendar />
-      <Box marginRight={'27px'} marginLeft={'27px'}>
-        <CardsWithTotalBalance />
-      </Box>
+      <CardsWithTotalBalance />
       <Section title={'Expenses'} rightElement={<ViewAll />}>
         <ExpensesList />
       </Section>

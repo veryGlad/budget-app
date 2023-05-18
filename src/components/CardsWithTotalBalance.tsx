@@ -15,7 +15,7 @@ const CardsWithTotalBalance = () => {
       display={'flex'}
       justifyContent={'space-between'}
       marginTop={'32px'}
-      maxWidth={360}
+      width={'360px'}
       margin={'0 auto'}
     >
       {bankAccounts.map((card, index) => (

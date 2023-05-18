@@ -1,7 +1,7 @@
 import { Box, styled } from '@mui/material';
-import WeekCalendar from './WeekCalendar';
 
 export const WeekCalendarWrapper = styled(Box)`
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   width: 360px;
   height: 160px;
   background: #fafafa;

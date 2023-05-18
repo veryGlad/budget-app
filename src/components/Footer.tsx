@@ -1,17 +1,23 @@
 import React from 'react';
-import { Box, Button } from '@mui/material';
+import { Box, Button, styled } from '@mui/material';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+const StyledLink = styled(NavLink)`
+  :visited {
+    color: #a3a3a3;
+  }
+
+  &.active {
+    color: #ff643b;
+  }
+`;
 
 const Footer = () => {
-  const navigator = useNavigate();
-  const navigateToPage = (url: string) => {
-    navigator(url);
-  };
   return (
     <Box
       position={'absolute'}
@@ -19,6 +25,7 @@ const Footer = () => {
       bottom={0}
       height={'90px'}
       width={'100%'}
+      boxShadow={'0px 0px 4px rgba(0, 0, 0, 0.09)'}
     >
       <Box
         display={'flex'}
@@ -28,21 +35,21 @@ const Footer = () => {
         marginRight={'28px'}
         marginLeft={'25px'}
       >
-        <Link to={'/home'}>
+        <StyledLink to={'/home'}>
           <HomeRoundedIcon />
-        </Link>
-        <Link to={'/expenses'}>
+        </StyledLink>
+        <StyledLink to={'/expenses'}>
           <CreditCardOutlinedIcon />
-        </Link>
-        <Link to={'/home'}>
+        </StyledLink>
+        <StyledLink to={'/'}>
           <AddCircleRoundedIcon fontSize={'large'} />
-        </Link>
-        <Link to={'/home'}>
+        </StyledLink>
+        <StyledLink to={'/'}>
           <CalendarMonthOutlinedIcon />
-        </Link>
-        <Link to={'/home'}>
+        </StyledLink>
+        <StyledLink to={'/'}>
           <SettingsOutlinedIcon />
-        </Link>
+        </StyledLink>
       </Box>
     </Box>
   );

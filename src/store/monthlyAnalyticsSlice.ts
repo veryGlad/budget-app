@@ -2,7 +2,8 @@ import { createSlice, Slice } from '@reduxjs/toolkit';
 
 export interface IMonthlyAnalytics {
   month: string;
-  sum: string;
+  value: number;
+  isSelected?: boolean;
 }
 
 export type MonthlyAnalyticsSlice = {
@@ -11,19 +12,19 @@ export type MonthlyAnalyticsSlice = {
 
 const initialState: MonthlyAnalyticsSlice = {
   data: [
-    { month: 'Jan', sum: '$1,234' },
-    { month: 'Feb', sum: '$2,234' },
-    { month: 'Mar', sum: '$5,234' },
-    { month: 'Apr', sum: '$2,234' },
-    { month: 'May', sum: '$1,000' },
-    { month: 'Jun', sum: '$2,900' },
-    { month: 'Jul', sum: '$3,900' },
+    { month: 'Jan', value: 1_234 },
+    { month: 'Feb', value: 2_234 },
+    { month: 'Mar', value: 5_234, isSelected: true },
+    { month: 'Apr', value: 2_234 },
+    { month: 'May', value: 1_000 },
+    { month: 'Jun', value: 2_900 },
+    { month: 'Jul', value: 3_900 },
   ],
 };
-export const userInfoSlice: Slice<MonthlyAnalyticsSlice> = createSlice({
-  name: 'monthlyAnalytics',
+export const monthlyAnalyticsSlice: Slice<MonthlyAnalyticsSlice> = createSlice({
+  name: 'monthlyAnalyticsSlice',
   initialState: initialState,
   reducers: {},
 });
 
-export default userInfoSlice.reducer;
+export default monthlyAnalyticsSlice.reducer;

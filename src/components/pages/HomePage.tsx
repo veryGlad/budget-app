@@ -1,29 +1,32 @@
 import React from 'react';
 import Header from '../Header';
 import { Box } from '@mui/material';
-import CreditCardBlock from '../CreditCardBlock';
-import FolderList from '../ui/ListItem';
-import TotalBalanceCard from '../ui/TotalBalanceCard';
+import CreditCardSection from '../CreditCard/CreditCardSection';
+import Section from '../Section';
+import TransactionItem from '../Transactions/TransactionsListItem';
+import TransactionsList from '../Transactions/TransactionsList';
+import AnalyticsChart from '../ExpensesChart/AnalyticsChart';
 
 const HomePage = () => {
   return (
-    <div>
-      <Header header={'Home'} />
+    <Box>
+      <Header
+        header={'Home'}
+        avatarPhoto={
+          'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50'
+        }
+      />
       <Box display={'flex'} justifyContent={'center'}>
-        <CreditCardBlock />
+        <CreditCardSection />
       </Box>
-      <Box
-        display={'flex'}
-        justifyContent={'center'}
-        width={'100%'}
-        marginTop={3}
-      >
-        <FolderList />
-      </Box>
-      <Box margin={'27px'}>
-        <TotalBalanceCard />
-      </Box>
-    </div>
+      <Box display={'flex'} justifyContent={'center'} width={'100%'}></Box>
+      <Section title={'Analytics'}>
+        <AnalyticsChart />
+      </Section>
+      <Section title={'Transactions'}>
+        <TransactionsList />
+      </Section>
+    </Box>
   );
 };
 

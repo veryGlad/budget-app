@@ -1,15 +1,15 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import userInfo from './userInfoSlice';
-import monthlyAnalytics from './monthlyAnalyticsSlice';
-import expenses from './expensesSlice';
-import transactions from './transactionsSlice';
+import userInfoSlice from './userInfoSlice';
+import monthlyAnalyticsSlice from './monthlyAnalyticsSlice';
+import expensesSlice from './expensesSlice';
+import transactionsSlice from './transactionsSlice';
 
 const rootReducer = combineReducers({
-  userInfo,
-  monthlyAnalytics,
-  expenses,
-  transactions,
+  userInfoSlice,
+  monthlyAnalyticsSlice,
+  expensesSlice,
+  transactionsSlice,
 });
 
 const store = configureStore({

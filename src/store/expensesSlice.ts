@@ -1,15 +1,15 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, Slice } from '@reduxjs/toolkit';
 
-type SliceState = {
-  expensesData: ITransactions[];
+type ExpensesSliceState = {
+  expenses: IExpense[];
 };
 
-const initialState = {
-  transactionDate: [
+const initialState: ExpensesSliceState = {
+  expenses: [
     {
       expenseAvatar:
         'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50',
-      expensesName: 'Nike Super Store',
+      expenseName: 'Nike Super Store',
       expensePaymentMethod: 'Bank Account',
       expenseDate: 'Fri, 5 April 2022',
       totalSpend: '$2,486',
@@ -18,14 +18,15 @@ const initialState = {
     },
   ],
 };
-export const expensesSlice = createSlice({
-  name: 'expenses',
+export const expensesSlice: Slice<ExpensesSliceState> = createSlice({
+  name: 'expensesSlice',
   initialState: initialState,
   reducers: {},
 });
 
-export interface ITransactions {
-  expensesName: string;
+export interface IExpense {
+  expenseAvatar: string;
+  expenseName: string;
   expensePaymentMethod: string;
   expenseDate: string;
   totalSpend: string;

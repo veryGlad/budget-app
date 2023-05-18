@@ -2,7 +2,14 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import MoreHorizOutlinedIcon from '@mui/icons-material/MoreHorizOutlined';
 
-const CreditCard = () => {
+export interface ICreditCardProps {
+  totalBalance: string;
+  cardNumber: string;
+}
+const CreditCard: React.FC<ICreditCardProps> = ({
+  totalBalance,
+  cardNumber,
+}) => {
   return (
     <Box
       height={'141px'}
@@ -28,11 +35,11 @@ const CreditCard = () => {
               Total Balance
             </Typography>
             <Typography color={'#fff'} variant={'h4'}>
-              $7622.00
+              {totalBalance}
             </Typography>
           </Box>
           <Typography variant={'h6'} color={'#A3A3A3'}>
-            4444 4444 4444 4444
+            {cardNumber}
           </Typography>
         </Box>
       </Box>

@@ -47,7 +47,7 @@ const TotalBalanceCard = () => {
         <Box marginLeft={'10px'}>
           <Typography>Bank Account</Typography>
           <Typography variant={'caption'} color={'#A3A3A3'}>
-            **** **** 4444
+            **** **** {cardNumber.slice(cardNumber.length - 4)}
           </Typography>
         </Box>
       </Box>
